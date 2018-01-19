@@ -14,6 +14,8 @@
 		9B5DA11B2011E3F900335EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B5DA11A2011E3F900335EA3 /* Assets.xcassets */; };
 		9B5DA11E2011E3F900335EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B5DA11C2011E3F900335EA3 /* LaunchScreen.storyboard */; };
 		9B5DA1292011E3F900335EA3 /* TabViewSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5DA1282011E3F900335EA3 /* TabViewSampleTests.swift */; };
+		9B5DA1342011F82A00335EA3 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B5DA1332011F82A00335EA3 /* WebViewController.swift */; };
+		9B5DA1662012084F00335EA3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5DA1652012084F00335EA3 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		9B5DA1242011E3F900335EA3 /* TabViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B5DA1282011E3F900335EA3 /* TabViewSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSampleTests.swift; sourceTree = "<group>"; };
 		9B5DA12A2011E3F900335EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B5DA1332011F82A00335EA3 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		9B5DA1652012084F00335EA3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B5DA1662012084F00335EA3 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,7 @@
 				9B5DA1102011E3F900335EA3 /* TabViewSample */,
 				9B5DA1272011E3F900335EA3 /* TabViewSampleTests */,
 				9B5DA10F2011E3F900335EA3 /* Products */,
+				9B5DA1642012084F00335EA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +89,7 @@
 				9B5DA1132011E3F900335EA3 /* FirstViewController.swift */,
 				9B5DA1152011E3F900335EA3 /* SecondViewController.swift */,
 				9B5DA1172011E3F900335EA3 /* Main.storyboard */,
+				9B5DA1332011F82A00335EA3 /* WebViewController.swift */,
 				9B5DA11A2011E3F900335EA3 /* Assets.xcassets */,
 				9B5DA11C2011E3F900335EA3 /* LaunchScreen.storyboard */,
 				9B5DA11F2011E3F900335EA3 /* Info.plist */,
@@ -97,6 +104,14 @@
 				9B5DA12A2011E3F900335EA3 /* Info.plist */,
 			);
 			path = TabViewSampleTests;
+			sourceTree = "<group>";
+		};
+		9B5DA1642012084F00335EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B5DA1652012084F00335EA3 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +220,7 @@
 				9B5DA1162011E3F900335EA3 /* SecondViewController.swift in Sources */,
 				9B5DA1122011E3F900335EA3 /* AppDelegate.swift in Sources */,
 				9B5DA1142011E3F900335EA3 /* FirstViewController.swift in Sources */,
+				9B5DA1342011F82A00335EA3 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
