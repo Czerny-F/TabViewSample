@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet var webView: WKWebView!
     @IBOutlet weak var refreshButton: UIBarButtonItem!
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -17,6 +17,7 @@ class FirstViewController: UIViewController {
     override func loadView() {
         super.loadView()
         webView.allowsBackForwardNavigationGestures = true
+        webView.navigationDelegate = self
     }
     
     override func viewDidLoad() {
@@ -35,6 +36,14 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        if webView.canGoBack {
+            backButton.isEnabled = true
+        } else {
+            backButton.isEnabled = false
+        }
+    }
+    
     @IBAction func refreshCurrentPage(_ sender: UIBarButtonItem) {
         webView.reload()
     }
