@@ -18,8 +18,9 @@ class WebViewController: UIViewController, WKUIDelegate  {
     override func loadView() {
         super.loadView()
         let webConfiguration = WKWebViewConfiguration()
-        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView = WKWebView(frame: view.frame, configuration: webConfiguration)
         webView.uiDelegate = self
+        webView.allowsBackForwardNavigationGestures = true
         view = webView
     }
     
@@ -36,7 +37,10 @@ class WebViewController: UIViewController, WKUIDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func refreshCurrentPage(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
     /*
     // MARK: - Navigation
 

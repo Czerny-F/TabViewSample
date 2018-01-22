@@ -11,6 +11,13 @@ import WebKit
 
 class FirstViewController: UIViewController {
     @IBOutlet var webView: WKWebView!
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    @IBOutlet weak var backButton: UIBarButtonItem!
+    
+    override func loadView() {
+        super.loadView()
+        webView.allowsBackForwardNavigationGestures = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +35,12 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func refreshCurrentPage(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+        webView.goBack()
+    }
 }
 

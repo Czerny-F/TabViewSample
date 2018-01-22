@@ -19,8 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qS3-Ah-hej">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <viewLayoutGuide key="safeArea" id="zhk-Px-O5V"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -30,14 +31,27 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qS3-Ah-hej" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="7Jy-Zk-xuf"/>
-                            <constraint firstItem="qS3-Ah-hej" firstAttribute="bottom" secondItem="tsR-hK-woN" secondAttribute="bottom" id="Z9b-xq-Q3b"/>
+                            <constraint firstItem="qS3-Ah-hej" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="Z9b-xq-Q3b"/>
                             <constraint firstItem="qS3-Ah-hej" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="obY-DK-pxk"/>
-                            <constraint firstItem="qS3-Ah-hej" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="wCE-0i-7lK"/>
+                            <constraint firstItem="qS3-Ah-hej" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wCE-0i-7lK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cTC-RR-kp9"/>
+                    <navigationItem key="navigationItem" id="cTC-RR-kp9">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="YSl-4b-y11">
+                            <connections>
+                                <action selector="back:" destination="9pv-A4-QxB" id="F35-gy-vY1"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="mNN-dl-cc3">
+                            <connections>
+                                <action selector="refreshCurrentPage:" destination="9pv-A4-QxB" id="iGn-Sf-bMS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="YSl-4b-y11" id="Vr8-Hh-5fQ"/>
+                        <outlet property="refreshButton" destination="mNN-dl-cc3" id="2tb-wB-hZP"/>
                         <outlet property="webView" destination="qS3-Ah-hej" id="9He-si-SZU"/>
                     </connections>
                 </viewController>
@@ -150,7 +164,11 @@
                         <viewLayoutGuide key="safeArea" id="A2b-uz-cgJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="eek-Je-jPg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2vn-mU-I3C"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="2vn-mU-I3C">
+                            <connections>
+                                <action selector="refreshCurrentPage:" destination="Ews-rx-BPW" id="Y0p-X9-6MC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="refreshButton" destination="2vn-mU-I3C" id="zaP-dx-j1r"/>
